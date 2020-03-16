@@ -14,3 +14,4 @@ Run tests with Electron.
 ```sh
 $ DEBUG_MODE=1 npm test
 ```
+# BookingUI
