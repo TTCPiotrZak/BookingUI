@@ -2,8 +2,14 @@ import _ from 'lodash';
 import React, {useEffect, FC} from 'react';
 import {bookingActions} from'./actions/bookingDetails'
 import { connect, useDispatch } from "react-redux";
+import Process  from './Process'
+
+import {phases} from './Process'
+
+import './designsystem.scss'
 
   const App = (props) => {
+    
     const dispatch = useDispatch();
 
 
@@ -25,7 +31,7 @@ import { connect, useDispatch } from "react-redux";
            <div key={key}><h1>{key}</h1>{items[key].map((dataItem, index) => {
                 return (<span key={index}>{dataItem.name} <br/> {dataItem.internationalCallingCode} <br/>{dataItem.alpha2}</span>)})}</div>)
        })}
-       <button className = "test" onClick ={()  => testFunction()}>Random</button>
+       <Process phases = {phases}/>
       </div>
     )
   }

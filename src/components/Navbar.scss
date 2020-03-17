@@ -1,0 +1,20 @@
+@import '../designsystem.scss';
+
+.Navbar{
+    display:inline-flex;
+    width:100%;
+    height:$big;
+    box-shadow: $shadow;
+    li{
+        list-style: none;
+        margin-left: $big;
+        &:hover {
+            cursor:pointer;
+            color:$brand-main-color;
+        }
+    }
+}
+
+li.phase-done{color:green;}
+li.phase-doing{border-bottom: 1px solid $brand-main-color;color:$brand-main-color;}
+li.phase-todo{color:grey}

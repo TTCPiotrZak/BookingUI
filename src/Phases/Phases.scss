@@ -1,0 +1,17 @@
+@import '../designsystem.scss';
+
+.container{
+    margin-left:15%;
+    width:70%;
+    margin-right:15%;
+}
+
+.room-choice{
+    box-shadow: $shadow;
+    height:180px;
+}
+
+.selected{
+    background-color:blue;
+}
+
