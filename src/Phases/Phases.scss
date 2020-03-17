@@ -9,9 +9,11 @@
 .room-choice{
     box-shadow: $shadow;
     height:180px;
+    cursor: pointer;
 }
 
 .selected{
-    background-color:blue;
+    border: 2px solid blue;
+    transition:1s;
 }
 
