@@ -1,0 +1,49 @@
+version: '2.1'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: web.dockerfile
+    image: booking-services-web
+    env_file:
+      - "booking-services-${BS_ENV}.env"
+    links:
+      - tropics-data-service
+    environment:
+      - BS_ENV
+      - API_URL=http://tropics-data-service:4001/
+    ports:
+      - "4000:4000"
+  tropics-data-service:
+    build:
+      context: .
+      dockerfile: tropics-data-service.dockerfile
+    image: booking-services-data
+    env_file:
+      - "booking-services-${BS_ENV}.env"
+    environment:
+      - BS_ENV
+    ports:
+      - "4001:4001"
+  base:
+    build:
+      context: .
+      dockerfile: base.dockerfile
+      args:
+        - GIT_COMMIT
+        - NODE_ENV=${NODE_ENV:-production}
+    image: booking-services-base:${BS_ENV}
+    env_file:
+      - "booking-services-${BS_ENV}.env"
+    environment:
+      - BS_ENV
+      - TOUR_GROUPS_GITHUB_CERT
+      - GIT_COMMIT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.docker:/root/.docker # docker login
+      - ~/.netrc:/root/.netrc # to push to heroku
+      - ~/.aws:/root/.aws # to push to amazon
+      - ~/tordokr01.corp.ttc:/etc/docker/certs.d/tordokr01.corp.ttc # ttc registry cert
+      - ~/output:/output

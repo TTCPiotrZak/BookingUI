@@ -1,0 +1,292 @@
+
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+@import 'rwd.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x:hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+$brand-main-color: #005C89;
+$brand-hover-color: #E8F0F4;
+$black-color:#23262E;
+$soft-grey-color:#7C7F86;
+$soft-grey-color2:#D5D3DA;
+$green-color:#019F02;
+$red-color:#FB0051;
+
+$soft-white-color: #F9F9F9;
+$border: 1px solid $soft-grey-color2;
+
+
+$containermargin:17.5%;
+$containerwidth:65%;
+
+$phaseswidth: 70%;
+$summarywidth: calc(100% - 70%);
+
+$xl: 60px;
+$l: 40px;
+$m: 35px;
+$s: 20px;
+$xs: 10px;
+
+$main-font-family: "'Proxima Nova Regular', arial, sans-serif";
+$headings-font-family: "'Proxima Nova Semibold', arial, sans-serif";
+$bold-headings-font-family: "'Proxima Nova Bold', arial, sans-serif";
+$xbold-headings-font-family: "'Proxima Nova Extrabold', arial, sans-serif";
+
+$shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+
+h1{
+  font-family:"Proxima Nova";
+  color: $black-color;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 50px;
+  line-height:1.5;
+  letter-spacing:1.4px;
+}
+
+h2{
+  font-family:"Proxima Nova";
+  color:$black-color;
+  font-size:28px;
+  font-weight:600;
+  line-height:1.5;
+  letter-spacing:1.4px;
+}
+
+h3{
+  font-family:"Proxima Nova";
+  color:$black-color;
+  font-size:24px;
+  font-weight:100;
+  line-height:1.5;
+  letter-spacing:0.8px;
+}
+
+h4{
+  font-family:"Proxima Nova";
+  color:$black-color;
+  font-size:20px;
+  line-height:24px;
+  font-weight:800;
+}
+
+p{
+  color:$black-color;
+  font-size:14px;
+  line-height:15px;
+  margin:$xs 0 $xs 0;
+  color: $black-color;
+}
+
+
+p.action{
+  color: $red-color;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-decoration:underline;
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+p.action-two{
+  color: $brand-main-color;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-decoration:underline;
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+
+.soft-color{
+  color:$soft-grey-color;
+  font-size:12px;
+}
+
+.green{
+color:$green-color;
+}
+
+.bold{
+  font-weight:600;
+}
+
+.primary-button{
+  height: 60px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: $red-color;
+  box-shadow: inset 0 0 4px 0 $brand-hover-color;
+  color:white;
+  font-size:18px;
+  transition:0.5s;
+  &:hover{
+    background-color: $red-color;
+    cursor:pointer;
+    transition:0.5s;
+    transform: scale(1.005);
+  }
+}
+
+.secondary-button{
+  height: 40px;
+  min-width:180px;
+  border-radius: 2px;
+  border-color: $brand-main-color;
+  color:$brand-main-color;
+  background-color:transparent;
+  font-size:18px;
+  transition:0.5s;
+  &:hover{
+    background-color: $brand-main-color;
+    cursor:pointer;
+    transition:0.5s;
+    color:white;
+    transform: scale(1.005);
+  }
+}
+
+.form-control, .form-control-icon{
+  box-sizing: border-box;
+  height: 50px;
+  width: 299px;
+  border: 1px solid $brand-hover-color;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  font-size:16px;
+  color:$soft-grey-color;
+  padding:0 0 0 $xs;
+  margin:0 $s 0 0
+}
+
+.form-control-icon{
+  padding:0 0 0 $l;
+}
+
+.form-control::placeholder{
+  font-size:16px;
+}
+
+hr{
+  border-top: 1px solid $soft-white-color;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select{
+  margin:0 0 0 0;
+  width:100%;
+  height:45px;
+}
+
+.margin{
+  margin: $m $m $m $m;
+  width:calc(100% - #{$m} - #{$m} );
+}
+
+select.minimal {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 5px),
+    calc(100% - 15px) calc(1em + 5px);
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  transition:1s;
+  &:hover{
+    background-image:
+    linear-gradient(130deg, transparent 50%, gray 50%),
+    linear-gradient(45deg, gray 50%, transparent 50%);
+    background-position:
+    calc(100% - 20px) calc(1em + 5px),
+    calc(100% - 15px) calc(1em + 5px);
+    transition:1s;
+  }
+}
+
+input[type="checkbox"] {
+  width:64px;
+  height:64px;
+  float:left;
+  &:hover{
+    cursor:pointer;
+  }
+  &:checked + label:before {
+      background: #222;
+  }
+}
+
+// ANIMATIONS
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes slideDown {
+  0%      { opacity: 0; -webkit-transform: translateY(-50px); }
+  100% { opacity: 1; -webkit-transform: translateY(0%); }
+}
+
+@keyframes slideDown {
+  0%      { opacity: 0; -webkit-transform: translateY(-50px); }
+  100% { opacity: 1; -webkit-transform: translateY(0%); }
+}
+
+@-webkit-keyframes slideUp {
+  0%      { opacity: 0; -webkit-transform: translateY(200px); }
+  100% { opacity: 1; -webkit-transform: translateY(0px); }
+}
+
+@keyframes slideUp {
+  0%      { opacity: 0; -webkit-transform: translateY(200px); }
+  100% { opacity: 1; -webkit-transform: translateY(0px); }
+}
+
+@-webkit-keyframes fadeSlideDown {
+  0%      { opacity: 1; -webkit-transform: translateY(0px); }
+  100% { opacity: 0; -webkit-transform: translateY(200px); }
+}
+
+@keyframes fadeSlideDown {
+  0%      { opacity: 1; -webkit-transform: translateY(0px); }
+  100% { opacity: 0; -webkit-transform: translateY(200px); }
+}

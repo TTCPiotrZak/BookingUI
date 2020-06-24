@@ -1,0 +1,55 @@
+@import '../designsystem.scss';
+
+.modal-wrapper {
+    background: white;
+    border: 1px solid #d0cccc;
+    box-shadow: $shadow;
+    margin:0 auto;
+    margin-left:-20%;
+    position:fixed;
+    transition: all .8s;
+    width: 30%;
+}
+
+.modal-header {
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 20px;
+    text-align: right;
+}
+
+.modal-header h3 {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-body {
+    padding: $m $m $m $m;
+    text-align:center;
+}
+
+.close-modal-btn {
+    cursor: pointer;
+    float: right;
+    font-size: 30px;
+    margin: 0;
+}
+
+.close-modal-btn:hover {
+    color: black;
+}
+
+.back-drop {
+    background-color: white;
+    opacity:0.5;
+    min-height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: all 1.3s;
+    min-width: 100%;
+    background-size: cover;
+}
+
+

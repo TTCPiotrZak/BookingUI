@@ -1,0 +1,294 @@
+@import '../designsystem.scss';
+@import '../img/icons.scss';
+@import '../img/icons-new.scss';
+
+.container-phases{
+    @include m {
+    width: 100%;
+    }
+
+    width:$phaseswidth;
+    padding: 0 $m $m $m
+}
+
+// 1-st Trip Overview
+
+.room-choice{
+    min-height:180px;
+    height: 100%;
+    cursor: pointer;
+    background-color:$soft-white-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 0 $s 0;
+}
+
+.room-icon{
+    align-items: center;
+    display:inline-flex;
+    float:left;
+    margin:0 auto;
+    p{
+        padding: 0 $xs 0 $xs;
+    }
+}
+
+.ribbon{
+ background-color:$green-color;   
+ color:white;
+ padding:$xs $xs $xs $xs;
+}
+
+.selected{
+    border: 2px solid $brand-main-color;
+    transition:1s;
+}
+
+p.error{
+    color:$red-color;
+    font-size:10px;
+    content: "\A"; 
+    white-space: pre; 
+}
+
+.form-control-group{
+    display:inline-flex;
+    margin:0 0 0 0;
+    select{
+        width:60px
+    }
+}
+
+.phase-container{
+    border-radius: 4px;
+    width:100%;
+    float:left;
+    margin:$s 0 $s 0;
+
+}
+
+.passenger-number{
+    background-color: $soft-white-color;
+}
+
+
+// 3-rd passenger
+
+.passenger-container{
+    width:100%;
+}
+
+.passenger-container-header{
+    display:inline-flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.phase-data{
+    float:left;
+    background-color:$soft-white-color;
+    // margin:$m 0 $m 0;
+    padding:$s $s $s $s;
+    width:calc(100% - #{$s} - #{$s});
+}
+
+.room-container{
+    float:left;
+    width:100%;
+}
+
+.checkbox-item{
+    display:inline-flex;
+    float:left;
+    width:100%;
+    float:left;
+}
+
+// Flights
+
+.choices{
+    width:100%;
+    float:left;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.accommodation-header{
+    width:calc(100% - #{$s} - #{$s});
+    padding:$s $s $s $s;
+
+    justify-content: space-between;
+}
+
+.accommodation-header-info{
+    display:inline-block;
+    h4{
+        margin:0;
+        padding:0;
+    }
+}
+
+.accommodation-price{
+    display:inline-flex;
+    float:right;
+    text-align:right;
+}
+
+.accommodation-price-info{
+    float:left;
+    width:100%;
+    display:inline-block;
+    text-align:left;
+}
+
+.minus{
+    display: flex;
+    align-items: center;
+    color: $brand-main-color;
+    cursor: pointer;
+    padding-left: $xs;
+    font-size: 1.8em;
+}
+
+.plus{
+    display: flex;
+    align-items: center;
+    color: $red-color;
+    cursor: pointer;
+    padding-left: $xs;
+    font-size: 1.8em;
+}
+
+.accommodation-dates{
+    display:inline-flex;
+    p{
+    margin:$s $xl $s 0;
+    }
+    span{
+        color: $brand-main-color;
+        font-size: 1.4em;
+        margin:0 $xs 0 0;
+    }
+}
+
+
+
+.hotel-pre {
+    position: relative;
+    font-size: 2.5em;
+    padding-right: 20px;
+    &:before{
+        font-family: 'be-icons-new' !important;
+        content: "\e949"
+    }
+    &:after{
+        font-family: 'be-icons-new' !important;
+        line-height: 1;
+        content: "\e94e";
+        position: absolute;
+        font-size: 0.55em;
+        top: $s;
+        left: 15px;
+        padding: 2px;
+        background: #F9F9F9;
+        border-radius: 50%;
+        color: $brand-main-color;
+    }
+}
+
+.plane {
+    position: relative;
+    font-size: 2.5em;
+    padding-right: 20px;
+    &:after{
+        content: "\e94e";
+        position: absolute;
+        font-size: 0.55em;
+        top: $s;
+        left: $s;
+        padding: 2px;
+        background: #F9F9F9;
+        border-radius: 50%;
+        color: $brand-main-color;
+    }
+}
+
+.section-dates{
+    display:inline-grid;
+    text-align:left;
+    width:50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Payment
+
+.cvc{
+    width:24px;
+    height:24px;
+}
+
+
+.choice{
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    display:inline-flex;
+    float:left;
+    width:calc(50% - #{$xl});
+    padding:$s $s $s $s;
+    border:$border;
+    &:hover{
+        border-color:$brand-main-color;
+        cursor:pointer;
+    }
+}
+
+.payment-header{
+    width:100%;
+    justify-content: space-between;
+    h4{
+        margin:0;
+    }
+}
+
+.payment-info{
+    justify-content: space-between;
+    width:60%;
+}
+
+.payment-info{
+    justify-content: space-between;
+    float:left;
+}
+
+.payment-price{
+    width:40%;
+    float:left;
+    text-align:right;
+}
+
+.credit-card-container{
+    margin:$xl 0 0 0;
+}
+
+.credit-card-container, .paypal-container, .save-container, .credit-card-billing-address, .choices {
+    -webkit-animation: slideDown 0.5s;
+    animation: slideDown 0.5s;
+}

@@ -1,0 +1,193 @@
+$maximize: "\e952";
+$arrow-down: "\e940";
+$arrow-dropdown: "\e941";
+$arrow-left-thick: "\e942";
+$arrow-return-thick: "\e943";
+$calendar: "\e944";
+$checkin: "\e945";
+$checkmark: "\e946";
+$checkout: "\e947";
+$download: "\e948";
+$hotel: "\e949";
+$minus: "\e94a";
+$phone: "\e94b";
+$pin: "\e94c";
+$plane: "\e94d";
+$plus: "\e94e";
+$questionmark: "\e94f";
+$roomtype: "\e950";
+$star: "\e951";
+
+
+@font-face {
+  font-family: "be-icons-new";
+  src:url("../fonts/be-icons-new.eot");
+  src:url("../fonts/be-icons-new.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/be-icons-new.woff") format("woff"),
+    url("../fonts/be-icons-new.ttf") format("truetype"),
+    url("../fonts/be-icons-new.svg#be-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin _new {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'be-icons-new' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* better font rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rotate-270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.rotate-45 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.maximize,
+.maximize:before{
+  @include _new;
+  content: $maximize;
+}
+
+.arrow-down,
+.arrow-down:before{
+    @include _new;
+    content: $arrow-down;
+}
+
+.arrow-dropdown,
+.arrow-dropdown:before{
+    @include _new;
+    content: $arrow-dropdown;
+}
+
+.arrow-left-thick,
+.arrow-left-thick:before{
+    @include _new;
+    content: $arrow-left-thick;
+}
+
+.arrow-return-thick,
+.arrow-return-thick:before{
+    @include _new;
+    content: $arrow-return-thick;
+}
+
+.calendar,
+.calendar:before{
+    @include _new;
+    content: $calendar;
+}
+
+.checkin,
+.checkin:before{
+    @include _new;
+    content: $checkin;
+}
+
+.checkmark,
+.checkmark:before{
+  @include _new;
+  content: $checkmark;
+}
+.checkout,
+.checkout:before{
+    @include _new;
+    content: $checkout;
+}
+
+.download,
+.download:before{
+    @include _new;
+    content: $download;
+}
+
+.hotel,
+.hotel:before{
+    @include _new;
+    content: $hotel;
+}
+
+.minus,
+.minus:before{
+    @include _new;
+    content: $minus;
+}
+
+.phone,
+.phone:before{
+    @include _new;
+    content: $phone;
+}
+
+.pin,
+.pin:before{
+    @include _new;
+    content: $pin;
+}
+
+.plane,
+.plane:before{
+    @include _new;
+    content: $plane;
+}
+
+.plus,
+.plus:before{
+    @include _new;
+    content: $plus;
+}
+
+.questionmark,
+.questionmark:before{
+    @include _new;
+    content: $questionmark;
+}
+
+.roomtype,
+.roomtype:before{
+    @include _new;
+    content: $roomtype;
+}
+
+.star,
+.star:before{
+    @include _new;
+    content: $star;
+}
+
+

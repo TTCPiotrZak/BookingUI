@@ -1,0 +1,164 @@
+@import '../designsystem.scss';
+@import '../rwd.scss';
+
+.right-summary{
+    @include m {
+        width:100%;
+    }
+    float:left;
+    height:100%;
+    width:$summarywidth;
+    // box-shadow: $shadow;
+}
+
+.container-summary{
+
+    @include m {
+        width:100%;
+    }
+    padding: $xs $s $s $s;
+    // box-shadow: $shadow;
+    border: $border;
+    border-radius:4px;
+}
+
+.summary-line{
+    height:40px;
+    background-color:$soft-grey-color2;
+    width:1px;
+    margin:0 $m 0 5px;
+    position:absolute;
+}
+
+.summary-header{
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content: space-between;
+}
+
+.summary-mobile-body{
+    @include m {
+        position: fixed; 
+        bottom: 0; 
+        margin:0 0 120px 0;
+        background-color:white;
+        -webkit-animation: slideUp 0.5s;
+        animation: slideUp 0.5s;
+    }
+}
+
+.fade-out{
+    @include m {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.5s;
+        -webkit-animation: fadeSlideDown 0.5s;
+        animation: fadeSlideDown 0.5s;
+    }
+}
+
+.summary-mobile-sticky{
+    @include m {
+        display:inline-flex;
+        position: fixed; 
+        bottom: 0; 
+        background-color:white;
+    }
+}
+
+
+
+
+.container-header{
+
+    @include m {
+        display:inline-flex;
+        width:100%;
+        margin:$xl $m $m $m;
+    }
+
+    width: calc(100% - #{$containermargin} - #{$containermargin} - #{$m});
+    margin: calc(#{$l} + #{$l}) calc(#{$containermargin} + #{$m}) $s calc(#{$containermargin} + #{$m});
+    justify-content:space-between;
+    display:inline-flex;
+    align-items: center;
+}
+
+.process-container{
+
+    @include sm {
+        display:inline-block;
+        width:100%;
+    }
+
+    @include md {
+        margin-left:$containermargin;
+        margin-right:$containermargin;
+        width:$containerwidth;
+        float:left;
+        display:inline-flex;
+    }
+}
+
+.process-return{
+    position:absolute;
+    left:calc(#{$containermargin} - #{$m});
+    top:12.5%;
+    height:18px;
+    width:18px;
+    opacity:0.5;
+    &:hover{
+        cursor:pointer;
+        opacity:1;
+    }
+}
+
+.summary-days-countries, .discounts, .final-price{
+    display:inline-flex;
+    width:100%;
+}
+
+.summary-days{
+    display:inline-block;
+    width:30%;
+}
+
+.summary-countries{
+    display:inline-block;
+    width:30%;
+}
+
+.summary-periods{
+    margin: $s 0 $s 0;
+    i{
+        color : $brand-main-color;
+        font-size:16px;
+        margin:0 0 0 0;
+        margin-right:5px;
+    }
+}
+
+.summary-data {
+    margin: 0 0 0 $s;
+}
+
+
+.discounts{
+    display:inline-block;
+    margin: $xs 0 $xs 0;
+}
+
+.final-price{
+    justify-content: space-between;
+}
+
+.discount{
+    justify-content: space-between;
+    width:100%;
+    display:inline-flex;
+}
+
+.summary-additional{
+    margin:$l 0 $l 0;
+}

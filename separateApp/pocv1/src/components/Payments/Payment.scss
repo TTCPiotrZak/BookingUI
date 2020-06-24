@@ -1,0 +1,37 @@
+@import '../../designsystem.scss';
+// import amex from "../../img/amex.svg";
+// import mastercard from "../../img/mastercard.svg";
+// import mastercard2 from "../../img/mastercard2.svg";
+// import paypal from "../../img/paypal.svg";
+// import visa from "../../img/visa.svg";
+
+
+
+
+.visa{
+    background: url('../../img/visa.svg')no-repeat scroll 7px 7px;
+    background-size: 42px;
+    transition:0.5s;
+}
+.mastercard{
+    background: url('../../img/mastercard.svg')no-repeat scroll 7px 7px;
+    background-size: 42px;
+    transition:0.5s;
+}
+.amex{
+    background: url('../../img/amex.svg')no-repeat scroll 7px 7px;
+    background-size: 42px;
+    transition:0.5s;
+}
+
+
+
+.security-code{
+    background: url('../../img/tick.svg')no-repeat scroll 7px 7px;
+    background-size: 24px;
+    background-position: left;
+    padding:0 0 0 $l !important;
+    width:24px;
+    height:24px;
+    transition:0.5s;
+}

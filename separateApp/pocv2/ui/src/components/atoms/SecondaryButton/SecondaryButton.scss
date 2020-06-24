@@ -1,0 +1,11 @@
+// @import "~general/general";
+
+$secondary-color:black;
+
+.primary-button {
+  background-color: $secondary-color;
+  color: $font-color-light;
+  padding: 20px;
+  font-size: 26px;
+  border: none;
+}

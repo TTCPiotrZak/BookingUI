@@ -1,0 +1,95 @@
+@import '../designsystem.scss';
+
+.Navbar{
+    display:inline-flex;
+    width:100%;
+    height:$xl;
+    box-shadow: $shadow;
+    position:fixed;
+    top:0;
+    border: $border;
+    background-color:white;
+
+    ul{
+        display:inline-flex;
+        width:75%;
+        margin: 0 auto;
+    }
+
+    @include m {
+        padding: 0 $s 0 $s;
+        width:100%;
+        li{
+            display: table;
+            margin:$s $s $s $xs;
+            list-style: none;
+            &:hover {
+                cursor:pointer;
+                color:$brand-main-color;
+            }
+        }
+    }
+
+    @include md {
+        padding:0 calc(#{$containermargin} + #{$m}) 0 calc(#{$containermargin} + #{$m});
+        li{
+            display: table;
+            margin:$s 0 0 $xl;
+            list-style: none;
+            &:hover {
+                cursor:pointer;
+                color:$brand-main-color;
+            }
+        }
+    }
+}
+
+.logo {
+    height:20px;
+    margin: $s 0 0 0;
+}
+
+li.phase-done{
+    @include m {
+        font-size:0px;
+        background-color:$green-color;
+        width: $xs;
+        height: $xs;
+        border-radius: 50%;
+    }
+    @include md{
+    font-size:14px;
+    font-weight:600;
+    color:$green-color;
+    }
+}
+
+li.phase-doing{
+    @include m {
+        font-size:0px;
+        background-color:$brand-main-color;
+        width: $xs;
+        height: $xs;
+        border-radius: 50%;
+    }
+    @include md{
+    font-size:14px;
+    font-weight:600;
+    color:$brand-main-color;
+}
+}
+
+li.phase-todo{
+    @include m {
+        font-size:0px;
+        background-color:$soft-grey-color;
+        width: $xs;
+        height: $xs;
+        border-radius: 50%;
+    }
+    @include md{
+    font-size:14px;
+    font-weight:400;
+    color:$soft-grey-color;
+    }
+}
